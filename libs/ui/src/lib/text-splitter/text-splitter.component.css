@@ -1,0 +1,21 @@
+:host {
+  --positive: #80EF80;
+  --negative: #FF8080;
+  --neutral: #CECECD;
+
+  display: flex;
+  color: var(--neutral);
+  font-size: 2rem;
+
+  .-positive {
+    color: var(--positive);
+  }
+
+  .-negative {
+    color: var(--negative);
+  }
+
+  .-neutral {
+    color: var(--neutral);
+  }
+}

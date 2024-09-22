@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { TextSplitterComponent } from '@type-race/ui';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [RouterModule, TextSplitterComponent],
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+    <main class="container">
+      <lib-text-splitter [text]="text" />
+    </main>
+  `,
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'type-race';
+  readonly text = 'Hello World !';
 }
